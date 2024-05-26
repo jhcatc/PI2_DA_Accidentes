@@ -1,14 +1,10 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import folium
-from folium.plugins import MarkerCluster
-import calendar
 import streamlit as st
 
 # Titular la pagina
-st.subheader('KPIs')
+st.title('KPIs')
 
 # Cargar archivos CSV
 
@@ -115,6 +111,9 @@ with columnB:
     
 # Graficar KPI 3
 
+# Filtrar los datos para los años 2019 a 2021
+df_filtered = df_homicidios_lesionados[df_homicidios_lesionados['AÑO'].isin([2019, 2020, 2021])]
+
 # Configuración de Streamlit
 st.set_option('deprecation.showPyplotGlobalUse', False)  # Deshabilitar advertencia de Pyplot Global Use
 
@@ -124,9 +123,9 @@ col_1, col_2, col_3 = st.columns(3)
 # Gráfico 1: X AÑO, Y LESIONADOS 
 with col_1:
     fig, ax1 = plt.subplots(figsize=(6, 4))
-    sns.barplot(data=df_homicidios_lesionados, x='AÑO', y='LESIONADOS', color='grey', ax=ax1)
-    ax1.set_ylabel('Lesionados', fontsize=14)
-    ax1.set_xlabel('Año', fontsize=14)
+    sns.barplot(data=df_filtered, y='AÑO', x='LESIONADOS', color='grey', ax=ax1, orient='h')
+    ax1.set_xlabel('Lesionados', fontsize=14)
+    ax1.set_ylabel('Año', fontsize=14)
     ax1.set_title('Lesionados por Año', fontsize=16)
     ax1.tick_params(axis='both', which='major', labelsize=12)
     st.pyplot(fig)
@@ -134,9 +133,9 @@ with col_1:
 # Gráfico 2: X AÑO, Y HOMICIDIOS 
 with col_2:
     fig, ax2 = plt.subplots(figsize=(6, 4))
-    sns.barplot(data=df_homicidios_lesionados, x='AÑO', y='HOMICIDIOS', color='purple', ax=ax2)
-    ax2.set_ylabel('Homicidios', fontsize=14)
-    ax2.set_xlabel('Año', fontsize=14)
+    sns.barplot(data=df_filtered, y='AÑO', x='HOMICIDIOS', color='purple', ax=ax2, orient='h')
+    ax2.set_xlabel('Homicidios', fontsize=14)
+    ax2.set_ylabel('Año', fontsize=14)
     ax2.set_title('Homicidios por Año', fontsize=16)
     ax2.tick_params(axis='both', which='major', labelsize=12)
     st.pyplot(fig)
@@ -144,9 +143,9 @@ with col_2:
 # Gráfico 3: X AÑO, Y LESIONADOS_HOMICIDIO barplot en rojo
 with col_3:
     fig, ax3 = plt.subplots(figsize=(6, 4))
-    sns.barplot(data=df_homicidios_lesionados, x='AÑO', y='LESIONADOS_HOMICIDIO', color='red', ax=ax3)
-    ax3.set_ylabel('Lesionados por Homicidio', fontsize=14)
-    ax3.set_xlabel('Año', fontsize=14)
+    sns.barplot(data=df_filtered, y='AÑO', x='LESIONADOS_HOMICIDIO', color='red', ax=ax3, orient='h')
+    ax3.set_xlabel('Lesionados por Homicidio', fontsize=14)
+    ax3.set_ylabel('Año', fontsize=14)
     ax3.set_title('Lesionados por Homicidio por Año', fontsize=16)
     ax3.tick_params(axis='both', which='major', labelsize=12)
     st.pyplot(fig)
