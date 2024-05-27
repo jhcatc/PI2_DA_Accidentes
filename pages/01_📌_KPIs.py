@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 
 # Titular la pagina
-st.title('KPIs')
+st.subheader('KPIs')
 
 # Cargar archivos CSV
 
@@ -53,9 +53,7 @@ with column2:
 
 with column3:
     st.write('Proporción Anual de Lesionados por cada Homicidio:')
-    st.write(df_homicidios_lesionados_Seleccion['PROPORCION'].iloc[0])
-    
-st.markdown('***')
+    st.write(df_homicidios_lesionados_Seleccion['PROPORCION'].iloc[0])    
 
 
 # Graficar KPI 1 y KPI 2
@@ -73,7 +71,7 @@ with columnA:
     custom_palette = dict(zip(unique_semesters, sns.color_palette('husl', len(unique_semesters))))
 
     # Crear una figura y ejes
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(8, 4))
 
     # Graficar las barras de TASA_HOMICIDIOS con los colores personalizados
     sns.barplot(data=df_homicidiosHechos_Semestre, x='AÑO', y='TASA_HOMICIDIOS', hue='SEMESTRE', ax=ax, palette=custom_palette)
@@ -93,7 +91,7 @@ with columnB:
     st.set_option('deprecation.showPyplotGlobalUse', False)  # Deshabilitar advertencia de Pyplot Global Use
 
     # Crear una figura y ejes
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(8, 4.65))
 
     # Graficar las barras de MOTOS con el color acuamarine
     sns.barplot(data=df_homicidiosHechos_Moto, x='AÑO', y='MOTOS', color='aquamarine', ax=ax)

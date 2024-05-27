@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-st.title("Dataframes de Homicidios y Lesionados")
+st.subheader("Dataframes de Homicidios y Lesionados")
 
 # Definir las Columnas que interesan
 
@@ -16,23 +16,23 @@ columnas_4 = ['ID_LESIONES', 'AÑO', 'VEHICULO_VICTIMA', 'SEXO', 'EDAD_VICTIMA']
 df_homicidiosHechos = pd.read_csv('data//homicidios_hechos_etl.csv', usecols=columnas_1)
 df_homicidiosHechos.dropna(inplace=True)
 # Mostrar el título del DataFrame y el Dataframe
-st.subheader("Datos de Eventos de Homicidios")
+st.write("Datos de Eventos de Homicidios")
 st.dataframe(df_homicidiosHechos)
 
 df_homicidiosVictimas = pd.read_csv('data//homicidios_victimas_etl.csv', usecols=columnas_2)
 df_homicidiosVictimas.dropna(inplace=True)
 # Mostrar el título del DataFrame y el Dataframe
-st.subheader("Datos de Victimas de Homicidios")
+st.write("Datos de Victimas de Homicidios")
 st.dataframe(df_homicidiosVictimas)
 
 df_lesionesHechos = pd.read_csv('data//lesiones_hechos_etl.csv', usecols=columnas_3)
 df_lesionesHechos.dropna(inplace=True)
 # Mostrar el título del DataFrame y el Dataframe
-st.subheader("Datos de Eventos de Lesionados")
+st.write("Datos de Eventos de Lesionados")
 st.dataframe(df_lesionesHechos)
 
 df_lesionesVictimas = pd.read_csv('data//lesiones_victimas_etl.csv', usecols=columnas_4)
 df_lesionesVictimas.dropna(inplace=True)
 # Mostrar el título del DataFrame y el Dataframe
-st.subheader("Datos de Victimas de Lesionados")
+st.write("Datos de Victimas de Lesionados")
 st.dataframe(df_lesionesVictimas)

@@ -2,9 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 # Titular la pagina
-st.title('Mapa de los Siniestros en CABA')
-
-st.markdown('***')
+st.subheader('Mapa de los Siniestros en CABA')
 
 # Ruta al archivo HTML
 html_file_path = 'code//mapa.html'
