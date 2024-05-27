@@ -114,16 +114,23 @@ Si bien en ultimo año en estudio (2021) existe una considerable reduccion ha PR
 
 ## DATA
 
-Ubicado en el directorio:  data. tenemos ocho archivos .csv que integran toda la Data manejada, Transformada y Guardada para y de todos los analisis. 
+Ubicado en el directorio:  data. tenemos ocho archivos .csv que integran toda la Data manejada, Transformada y Guardada para y de todos los analisis.  <br />
 
-** data//homicidios_hechos_etl.csv - Toda la Data de los hechos de siniestros Viales con Homicidios en un lapso temporal del año 2016 al 2021.
-** data//homicidios_lesionados.csv - Toda la Data cruzada de los Homicidios y Lesionados en un lapso temporal del año 2019 al 2021, usada para el KPI 3.
-** data//homicidios_victimas_etl.csv - Toda la Data de las victimas de siniestros Viales con Homicidios en un lapso temporal del año 2016 al 2021.
-** data//homicidiosHechos_Moto.csv - Toda la Data cruzada de los Homicidios ocurridos con Motociclistas como victima, en un lapso temporal del año 2016 al 2021, usada para el KPI 2.
-** data//homicidiosHechos_Semestre.csv - Toda la Data cruzada de los Homicidios ocurridos por Semestre, considerando la reduccion respecto al Semestre anterior, en un lapso temporal del año 2016 al 2021, usada para el KPI 1.
-** data//lesiones_hechos_etl.csv - Toda la Data de los hechos de siniestros Viales con Lesionados (con o sin Homicidios) en un lapso temporal del año 2019 al 2021.
-** data//lesiones_victimas_etl.csv - Toda la Data de las victimas de siniestros Viales con Lesionados (con o sin Homicidios) en un lapso temporal del año 2019 al 2021.
-** data//poblacion_CABA.csv - Toda la Data de la poblacion de la Comunidad Autonoma de Buenos Aires en un lapso temporal de 2016 al 2021.
+** data//homicidios_hechos_etl.csv - Toda la Data de los hechos de siniestros Viales con Homicidios en un lapso temporal del año 2016 al 2021. <br />
+
+** data//homicidios_lesionados.csv - Toda la Data cruzada de los Homicidios y Lesionados en un lapso temporal del año 2019 al 2021, usada para el KPI 3. <br />
+
+** data//homicidios_victimas_etl.csv - Toda la Data de las victimas de siniestros Viales con Homicidios en un lapso temporal del año 2016 al 2021. <br />
+
+** data//homicidiosHechos_Moto.csv - Toda la Data cruzada de los Homicidios ocurridos con Motociclistas como victima, en un lapso temporal del año 2016 al 2021, usada para el KPI 2. <br />
+
+** data//homicidiosHechos_Semestre.csv - Toda la Data cruzada de los Homicidios ocurridos por Semestre, considerando la reduccion respecto al Semestre anterior, en un lapso  temporal del año 2016 al 2021, usada para el KPI 1. <br />
+
+** data//lesiones_hechos_etl.csv - Toda la Data de los hechos de siniestros Viales con Lesionados (con o sin Homicidios) en un lapso temporal del año 2019 al 2021. <br />
+
+** data//lesiones_victimas_etl.csv - Toda la Data de las victimas de siniestros Viales con Lesionados (con o sin Homicidios) en un lapso temporal del año 2019 al 2021. <br />
+
+** data//poblacion_CABA.csv - Toda la Data de la poblacion de la Comunidad Autonoma de Buenos Aires en un lapso temporal de 2016 al 2021. <br />
 
 ___________
 
@@ -135,37 +142,37 @@ ___________
 <img src ="statics//deploy.png">
 <p>
 
-Se realiza despliegue del Proyecto con la libreria de python Streamlit.
-La página consta de cinco links para explorar el analisis en general.
-** Introducción - breve descriccion y resumen del proyecto.
-** KPIs - Presentacion de los tres KPI, y graficas de los mismos.
-** Visualizaciones - Visualizaciones filtradas por AÑO, donde cada grafico puede ser ampliado para detallar mejor.
-Dispercion de Direcciones de sinisestros respecto a Victimas de Homicidios o de solo Lesiones.
-Proporcion de Homicidios y/o Lesiones respecto al Sexo de la vcitima.
-Frecuencia de Homicidios segun la edad de la victima.
-Frecuencia de Homicidios vs frecuencia de Lesionados por cada un Homicidio.
-Frecuencia de Homicidios respecto a la hora de ocurrencia.
-Frecuencia de Homicidios por cada Mes del Año.
-** Mapa Sinisestro - Mapa con la ocurrecio de Homicidios y Lesionados en CABA, filtrado por Lesionados o por Homicidios
-** Dataframe - Presentacion de los cuatro principales conjuntos de datos, interactivos que permite filtrar, ordenar y buscar por cada columna.
+Se realiza despliegue del Proyecto con la libreria de python Streamlit. <br />
+La página consta de cinco links para explorar el analisis en general. <br />
+** Introducción - breve descriccion y resumen del proyecto. <br />
+** KPIs - Presentacion de los tres KPI, y graficas de los mismos. <br />
+** Visualizaciones - Visualizaciones filtradas por AÑO, donde cada grafico puede ser ampliado para detallar mejor. <br />
+Dispercion de Direcciones de sinisestros respecto a Victimas de Homicidios o de solo Lesiones. <br />
+Proporcion de Homicidios y/o Lesiones respecto al Sexo de la vcitima. <br />
+Frecuencia de Homicidios segun la edad de la victima. <br />
+Frecuencia de Homicidios vs frecuencia de Lesionados por cada un Homicidio. <br />
+Frecuencia de Homicidios respecto a la hora de ocurrencia. <br />
+Frecuencia de Homicidios por cada Mes del Año. <br />
+** Mapa Sinisestro - Mapa con la ocurrecio de Homicidios y Lesionados en CABA, filtrado por Lesionados o por Homicidios <br />
+** Dataframe - Presentacion de los cuatro principales conjuntos de datos, interactivos que permite filtrar, ordenar y buscar por cada columna. <br />
 
 ## Repositorio
 
-Introduccion.py - Ubicada en el directorio raiz de la aplicación.
-pages//01_📌_KPIs.py - Página de los KPIs.
-pages//02_📊_Visualizaciones.py - Página de las Visualizaciones.
-pages//03_🗺_Mapa_Siniestros.py - Página del mapa de los siniestros.
-pages//04_📇_Dataframes.py - Página con la presentacion de los Dataframe.
-code//mapa.html - Mapa en .html realizados con la libreria 'folium' de python, donde se representa los Homicidios y Lesionados en CABA, que luego es desplegado con su respectiva página. 
+Introduccion.py - Ubicada en el directorio raiz de la aplicación. <br />
+pages//01_📌_KPIs.py - Página de los KPIs. <br />
+pages//02_📊_Visualizaciones.py - Página de las Visualizaciones. <br />
+pages//03_🗺_Mapa_Siniestros.py - Página del mapa de los siniestros. <br />
+pages//04_📇_Dataframes.py - Página con la presentacion de los Dataframe. <br />
+code//mapa.html - Mapa en .html realizados con la libreria 'folium' de python, donde se representa los Homicidios y Lesionados en CABA, que luego es desplegado con su respectiva página.  <br />
 
 ## Base de Datos MySQL
 
 En el directorio data_mysql - Tenemos la integracion de toda la Data lista para trabajar en MySQL
 
-data//pi2_da.sql - Base de Datos donde incluimos los ocho Dataframe
-data//Tablas_Data.mwb - El archivo guardado de la modificacion y configuracion en Workbench, cambio de tipos de datos, relaciones de las tablas.
+data//pi2_da.sql - Base de Datos donde incluimos los ocho Dataframe <br />
+data//Tablas_Data.mwb - El archivo guardado de la modificacion y configuracion en Workbench, cambio de tipos de datos, relaciones de las tablas. <br />
 
-Esta Data no es directamente usada en el proyecto expuesto (ya que estaremos trabajando con librerias de Python, Streamlit), pero se guardo listo para usar en caso que sea necesario para trabajar en MySQL o algun cambio de Visualizacion en otra aplicacion tipo PowerBI.
+Esta Data no es directamente usada en el proyecto expuesto (ya que estaremos trabajando con librerias de Python, Streamlit), pero se guardo listo para usar en caso que sea  <br />necesario para trabajar en MySQL o algun cambio de Visualizacion en otra aplicacion tipo PowerBI. <br />
 
 
 
