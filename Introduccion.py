@@ -9,6 +9,7 @@ st.subheader(':ambulance: Reporte PI2 DA - Siniestros Viales') #Titulo del Dash
 # st.markdown('***')
 st.image("statics//caba.png", use_column_width=True)
 
+st.sidebar.write("Navegación")
 st.markdown('###')
 st.subheader('Presentacion del Problema:')
 

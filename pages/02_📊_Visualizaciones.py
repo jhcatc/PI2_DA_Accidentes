@@ -13,8 +13,6 @@ st.subheader('Visualizaciones')
 
 # Cargar archivos CSV
 
-#df_homicidiosHechos_Moto = pd.read_csv('data//homicidiosHechos_Moto.csv', index_col=0)
-#df_homicidiosHechos_Semestre = pd.read_csv('data//homicidiosHechos_Semestre.csv', index_col=0)
 df_homicidios_lesionados = pd.read_csv('data//homicidios_lesionados.csv', index_col=0)
 df_homicidiosHechos = pd.read_csv('data//homicidios_hechos_etl.csv', index_col=0)
 df_homicidiosVictimas = pd.read_csv('data//homicidios_victimas_etl.csv', index_col=0)
