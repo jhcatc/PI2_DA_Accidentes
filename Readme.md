@@ -10,7 +10,7 @@
  <b>PROYECTO INTEGRADOR 2 - DA</b>
 </h1>
 
-<h1 align="center"> [Link para el Deploy del Dashboard en Render] (https://pi2-da-accidentes.onrender.com/)</h1>
+# [Link para el Deploy del Dashboard en Render] (https://pi2-da-accidentes.onrender.com/)
 
 
 # Presentación del Problema
