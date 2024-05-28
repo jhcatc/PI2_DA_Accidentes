@@ -6,7 +6,6 @@ st.set_page_config(page_title = 'PI_2', #Nombre de la pagina, sale arriba cuando
                    page_icon = 'clipboard:', # https://www.webfx.com/tools/emoji-cheat-sheet/
                    layout="wide")
 st.subheader(':ambulance: Reporte PI2 DA - Siniestros Viales') #Titulo del Dash
-st.subheader('Link para el Deployd del Dashboard https://pi2-da-accidentes.onrender.com/')
 # st.markdown('***')
 st.image("statics//caba.png", use_column_width=True)
 
