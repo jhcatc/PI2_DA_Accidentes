@@ -110,7 +110,7 @@ Este KPI se centra en medir y gestionar la relación entre lesionados y homicidi
 Nuestra META es la reduccion en un 10% del valor de PROPORCION respecto al AÑO anterior.
 Podemos intuir lo visto en analisis anteriores de KPIs.
 Si se ha hecho algun plan de accion este no ha surtido efecto buscado, aunque la falta de tendencia muestra posiblemente que no se ha trabajado ningun plan de accion atacando causas raices.
-Si bien en ultimo año en estudio (2021) existe una considerable reduccion ha PROPORCION muy por encima de la meta propuestas en la medicion del KPI, lo que seria muy positivo si fuera repetitivo, tambien vemos que este reduccion viene de un aumento mucho mayor en la relacion en par de años anteriores.
+Si bien en ultimo año en estudio (2021) existe una considerable reduccion ha PROPORCION no alcanza a la meta propuestas en la medicion del KPI, lo que seria muy positivo si fuera repetitivo, tambien vemos que este reduccion viene de un aumento mucho mayor en la relacion en par de años anteriores.
 
 ## DATA
 

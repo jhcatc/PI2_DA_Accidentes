@@ -10,7 +10,7 @@ __pycache__/
 # Carpeta de scripts de entorno virtual de Python 
 Scripts/
 Lib/
-venv/
+myenv/
 
 # C extensions
 *.so

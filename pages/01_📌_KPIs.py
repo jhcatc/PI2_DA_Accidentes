@@ -14,46 +14,29 @@ df_homicidios_lesionados = pd.read_csv('data//homicidios_lesionados.csv', index_
 
 # st.dataframe(df) 
 
-# Filtrar los tres DataFrames por el año seleccionado
-año_seleccionado = st.sidebar.selectbox(
-    "Seleccione el Año:",
-    options=df_homicidiosHechos_Semestre['AÑO'].unique(),
-    index=0  # Selecciona el primer año por defecto
-)
-
-df_homicidiosHechos_Moto_Seleccion = df_homicidiosHechos_Moto[df_homicidiosHechos_Moto['AÑO'] == año_seleccionado]
-df_homicidiosHechos_Semestre_Seleccion = df_homicidiosHechos_Semestre[df_homicidiosHechos_Semestre['AÑO'] == año_seleccionado]
-df_homicidios_lesionados_Seleccion = df_homicidios_lesionados[df_homicidios_lesionados['AÑO'] == año_seleccionado]
-
-# Filtrar por Semestre
-semestre_seleccionado = st.sidebar.selectbox(
-    "Seleccione el Semestre:",
-    options = df_homicidiosHechos_Semestre['SEMESTRE'].unique(),
-    index=0  # Selecciona el primer semestre por defecto
-)
-
-df_homicidiosHechos_Semestre_Seleccion = df_homicidiosHechos_Semestre_Seleccion[df_homicidiosHechos_Semestre_Seleccion['SEMESTRE'] == semestre_seleccionado]
-
+df_homicidiosHechos_Moto_Seleccion = df_homicidiosHechos_Moto
+df_homicidiosHechos_Semestre_Seleccion = df_homicidiosHechos_Semestre
+df_homicidios_lesionados_Seleccion = df_homicidios_lesionados
 
 # KPIs
 
-tasa_homicidios = df_homicidiosHechos_Semestre_Seleccion['TASA_HOMICIDIOS']
-accidentes_motorizados = df_homicidiosHechos_Moto_Seleccion['EVOLUCION_ANUAL']
-lesionados_homicidio = df_homicidios_lesionados_Seleccion['PROPORCION']
+tasa_homicidios = df_homicidiosHechos_Semestre_Seleccion.loc[11, 'REDUCCION']
+accidentes_motorizados = df_homicidiosHechos_Moto_Seleccion.loc[5, 'EVOLUCION_ANUAL']
+lesionados_homicidio = df_homicidios_lesionados_Seleccion.loc[2, 'PROPORCION']
 
 column1, column2, column3 = st.columns(3)
 
 with column1:
-    st.write("Tasa Semestral de Homicidios cada 100 000 hab en CABA:")
-    st.write(df_homicidiosHechos_Semestre_Seleccion['TASA_HOMICIDIOS'].iloc[0])
+    st.write("Reducción 10% - Tasa Semestral de Homicidios cada 100 000 hab en CABA:")
+    st.write(tasa_homicidios)
 
 with column2:
-    st.write('Evolucion Anual de Accidentes Mortales en Motorizados:')
-    st.write(df_homicidiosHechos_Moto_Seleccion['EVOLUCION_ANUAL'].iloc[0])
+    st.write('Reducción 7% - Evolucion Anual de Accidentes Mortales en Motorizados:')
+    st.write(accidentes_motorizados)
 
 with column3:
-    st.write('Proporción Anual de Lesionados por cada Homicidio:')
-    st.write(df_homicidios_lesionados_Seleccion['PROPORCION'].iloc[0])    
+    st.write('Aumento 10% - Proporción Anual de Lesionados por cada Homicidio:')
+    st.write(lesionados_homicidio)    
 
 
 # Graficar KPI 1 y KPI 2
