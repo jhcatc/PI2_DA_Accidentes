@@ -9,7 +9,20 @@ st.subheader(':ambulance: Reporte PI2 DA - Siniestros Viales') #Titulo del Dash
 # st.markdown('***')
 st.image("statics//caba.png", use_column_width=True)
 
-st.sidebar.write("Navegación")
+
+# Sidebar para la navegación
+st.sidebar.title("")
+pagina_seleccionada = st.sidebar.radio("Ir a", ("KPIs", "Visualizaciones", "Mapa_Siniestros", "Dataframes"))
+
+# Mapeo de nombres de las páginas a sus archivos correspondientes
+paginas = {
+    "KPIs": "pages.KPIs",
+    "Visualizaciones": "pages.Visualizaciones",
+    "Mapa_Siniestros": "pages.Mapa_Siniestros",
+    "Dataframes": "pages.Dataframes",
+}
+
+
 st.markdown('###')
 st.subheader('Presentacion del Problema:')
 
